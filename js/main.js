@@ -2,9 +2,10 @@ const app = {
     item: {
         longitud: undefined,
         latitud: undefined,
+        map: undefined,
     },
     initMap: function () {
-        var map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
             zoom: 5,
             center: { <!--Centrado en Peru-->   
                 lat: -9.1191427,
@@ -18,7 +19,7 @@ const app = {
     },
 
     setup: function () {
-        $('#encuentrame').click(app.buscar);
+        $('#encuentrame').click(app.buscar());
     },
 
     buscar: function () {
