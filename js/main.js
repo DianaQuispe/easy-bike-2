@@ -5,7 +5,7 @@ const app = {
         map: undefined,
     },
     initMap: function () {
-        map = new google.maps.Map(document.getElementById('map'), {
+        app.item.map = new google.maps.Map(document.getElementById('map'), {
             zoom: 5,
             center: { <!--Centrado en Peru-->   
                 lat: -9.1191427,
@@ -19,10 +19,10 @@ const app = {
     },
 
     setup: function () {
-        $('#encuentrame').click(app.buscar);
+        $('#encuentrame').click(app.search);
     },
 
-    buscar: function () {
+    search: function () {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(app.funcionExito, app.funcionError)
         }
@@ -38,8 +38,8 @@ const app = {
             animation: google.maps.Animation.DROP,
             map: map,
         });
-        map.setZoom(17);
-        map.setCenter({
+        app.item.map.setZoom(17);
+        app.item.map.setCenter({
             lat: app.item.latitud,
             lng: app.item.longitud
         });
