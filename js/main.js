@@ -36,7 +36,7 @@ const app = {
                 lng: app.item.longitud,
             },
             animation: google.maps.Animation.DROP,
-            map: map,
+            map: app.item.map,
         });
         app.item.map.setZoom(17);
         app.item.map.setCenter({
