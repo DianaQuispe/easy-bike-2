@@ -19,7 +19,7 @@ const app = {
     },
 
     setup: function () {
-        $('#encuentrame').click(app.buscar());
+        $('#encuentrame').click(app.buscar);
     },
 
     buscar: function () {
